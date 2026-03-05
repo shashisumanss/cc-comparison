@@ -131,12 +131,14 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   text-decoration: none;
+  margin-top: -4px;
+  /* Fix offset */
 }
 
 .header-logo svg {
-  height: 40px;
+  height: 48px;
   width: auto;
 }
 
@@ -165,7 +167,9 @@ body {
 
 .header-nav {
   display: flex;
+  align-items: center;
   gap: var(--space-sm);
+  margin-top: 2px;
 }
 
 .header-nav a {
@@ -351,13 +355,13 @@ body {
 }
 
 .btn-secondary {
-  background: var(--bg-glass);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text-primary);
   border: 1px solid var(--border-light);
 }
 
 .btn-secondary:hover {
-  background: var(--bg-glass-hover);
+  background: rgba(255, 255, 255, 0.15);
   border-color: var(--border-accent);
 }
 
@@ -643,6 +647,8 @@ body {
 }
 
 .card-tile {
+  display: flex;
+  flex-direction: column;
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -666,6 +672,9 @@ body {
 
 .card-tile-body {
   padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-tile-image {
@@ -675,12 +684,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
+  padding: var(--space-md);
 }
 
 .card-tile-image img {
-  width: 70%;
-  height: auto;
+  width: auto;
+  max-width: 90%;
+  height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
   transition: transform 0.4s ease;
@@ -702,17 +713,17 @@ body {
 }
 
 .card-tile-issuer {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .card-tile-name {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--text-primary);
   line-height: 1.3;
 }
@@ -822,6 +833,8 @@ body {
 .card-tile-actions {
   display: flex;
   gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-md);
 }
 
 .card-tile-actions .btn {

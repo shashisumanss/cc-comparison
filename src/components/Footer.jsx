@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-inner">
                 <div className="footer-brand">
-                    <svg width="160" height="48" viewBox="-9 7 193 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="160" height="48" viewBox="-15 -5 200 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="ftr_g1" x1="0%" y1="0%" x2="100%" y2="0%">
                                 <stop stopColor="#00D4FF" />
