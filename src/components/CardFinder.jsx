@@ -62,8 +62,6 @@ function scoreCard(card, answers) {
     // Bonus for rating
     score += card.rating * 3;
 
-    // Bonus for featured
-    if (card.featured) score += 5;
 
     return Math.min(Math.round(score), 100);
 }

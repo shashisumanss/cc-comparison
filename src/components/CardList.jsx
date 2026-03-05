@@ -8,7 +8,7 @@ export default function CardList({ onViewCard, compareCards, onCompare }) {
     const [network, setNetwork] = useState('All');
     const [maxFee, setMaxFee] = useState('Any');
     const [creditScore, setCreditScore] = useState('All');
-    const [sortBy, setSortBy] = useState('featured');
+    const [sortBy, setSortBy] = useState('highest-rated');
 
     const filtered = useMemo(() => {
         let result = [...cards];
@@ -49,9 +49,6 @@ export default function CardList({ onViewCard, compareCards, onCompare }) {
 
         // Sort
         switch (sortBy) {
-            case 'featured':
-                result.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || b.rating - a.rating);
-                break;
             case 'lowest-fee':
                 result.sort((a, b) => a.annualFee - b.annualFee);
                 break;
@@ -110,9 +107,8 @@ export default function CardList({ onViewCard, compareCards, onCompare }) {
                 <div className="filter-group">
                     <span className="filter-label">Sort By</span>
                     <select className="filter-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                        <option value="featured">Featured</option>
-                        <option value="lowest-fee">Lowest Fee</option>
                         <option value="highest-rated">Highest Rated</option>
+                        <option value="lowest-fee">Lowest Fee</option>
                         <option value="name">Name (A-Z)</option>
                     </select>
                 </div>

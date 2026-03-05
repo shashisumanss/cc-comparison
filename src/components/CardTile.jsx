@@ -26,8 +26,12 @@ function StarRating({ rating }) {
 export default function CardTile({ card, onViewCard, onCompare, isCompared }) {
     return (
         <div className="card-tile" onClick={() => onViewCard(card)}>
-            {card.featured && <div className="featured-badge">⭐ Featured</div>}
             <div className="card-tile-accent" style={{ background: card.color }} />
+            {card.image && (
+                <div className="card-tile-image">
+                    <img src={card.image} alt={card.name} loading="lazy" />
+                </div>
+            )}
             <div className="card-tile-body">
                 <div className="card-tile-header">
                     <div className="card-tile-info">
