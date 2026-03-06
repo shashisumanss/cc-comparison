@@ -7,6 +7,7 @@ import CardDetail from './components/CardDetail';
 import CompareCards from './components/CompareCards';
 import CompareBar from './components/CompareBar';
 import Footer from './components/Footer';
+import AdBanner from './components/AdBanner';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -75,9 +76,14 @@ export default function App() {
         <Hero onNavigate={navigateTo} />
       </div>
 
+      <AdBanner dataAdSlot="1234567890" /> {/* Placeholder slot ID */}
+
       <div ref={finderRef}>
         <CardFinder onViewCard={handleViewCard} onNavigate={navigateTo} />
       </div>
+
+      <AdBanner dataAdSlot="0987654321" /> {/* Placeholder slot ID */}
+
 
       <div ref={browseRef}>
         <CardList

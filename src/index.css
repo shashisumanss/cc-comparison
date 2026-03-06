@@ -1267,11 +1267,12 @@ body {
 }
 
 .result-card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
   overflow: hidden;
   transition: var(--transition-slow);
 }

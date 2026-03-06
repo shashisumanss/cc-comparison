@@ -111,7 +111,7 @@ export default function CardFinder({ onViewCard, onNavigate }) {
                     {results.map((card, i) => (
                         <div key={card.id} className="result-card">
                             <div className="card-tile-accent" style={{ background: card.color }} />
-                            <div style={{ padding: '24px' }}>
+                            <div className="card-tile-body">
                                 <div className="result-match">
                                     {i === 0 ? '🏆' : i === 1 ? '🥈' : '🥉'} {card.matchScore}% Match
                                 </div>
